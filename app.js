@@ -15,12 +15,12 @@ var outputBox = document.querySelector("#output-box");
 
 function calculateProfitOrLoss(initial, quantity, current) {
     if (initial > current) {
-        var loss = (initial - current) * quantity;
-        var lossPercentage = (loss / initial) * 100;
+        var loss = (initial - current)*quantity ;
+        var lossPercentage = ((initial - current)/ initial) * 100;
         showLoss(loss, lossPercentage);
     } else if (current > initial) {
-        var profit = (current - initial) * quantity;
-        var profitPercentage = (profit / initial) * 100;
+        var profit = (current - initial)*quantity;
+        var profitPercentage = ((current - initial) / initial) * 100;
         showProfit(profit, profitPercentage);
     } else {
         showOutput("No pain no gain and no gain no pain 😏 !!");
